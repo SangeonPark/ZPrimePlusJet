@@ -455,8 +455,10 @@ if __name__ == '__main__':
     outputExists = False
     if glob.glob(options.odir+'/Plots_1000pb_weighted.root'):
         outputExists = True
-        
-    main(options,args,outputExists)
+    
+    p = Process(target=main, args=(options,args,outputExists))    
+    p.start()
+    p.join()
 ##----##----##----##----##----##----##
 
 
