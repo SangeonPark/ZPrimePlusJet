@@ -29,7 +29,8 @@ def main(options,args):
 	       'ZnnHbb': ' Z(#nu#nu)H(b#bar{b})',
 	       'WHbb': 'W(q#bar{q})H(b#bar{b})',
 	       'tthbb': 'ttH(b#bar{b})',	   	
-	       #'Phibb': ' Phi(125)(b#bar{b})'}
+	       #'Phibb': ' Phi(125)(b#bar{b})'
+           }
 
         
     tfiles = {'ggHbb': [idirData + '/GluGluHToBB_M125_13TeV_powheg_pythia8_CKKW_1000pb_weighted.root'],
