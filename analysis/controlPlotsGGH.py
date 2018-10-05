@@ -27,7 +27,9 @@ def main(options,args,outputExists):
     #idir = "/eos/uscms/store/user/lpchbb/ggHsample_V11/sklim-v0-28Oct/"
     #odir = "plots_2016_10_31/"
     idir = options.idir   
-    idirData = 'root://cmseos.fnal.gov//eos/uscms/store/user/lpchbb/zprimebits-v12.05/'
+    #idirData = 'root://cmseos.fnal.gov//eos/uscms/store/user/lpchbb/zprimebits-v12.05/'
+    idirData = '/mnt/hadoop/scratch/drankin/BaconBits/2016/'
+
     odir = options.odir
     lumi = options.lumi
     isData = options.isData
@@ -63,7 +65,8 @@ def main(options,args,outputExists):
     if isData and muonCR:
         legname['data'] = 'SingleMuon data'
        
-    tfiles = {'Hbb':   [idir+'/GluGluHToBB_M125_13TeV_powheg_pythia8_all_1000pb_weighted.root',
+    tfiles = {'Hbb':   [#idir+'/GluGluHToBB_M125_13TeV_powheg_pythia8_all_1000pb_weighted.root',
+    		idir+'/GluGluHToBB_M125_13TeV_powheg_pythia8_CKKW_1000pb_weighted.root',
 			idir+'/VBFHToBB_M_125_13TeV_powheg_pythia8_weightfix_all_1000pb_weighted.root',
 			idir+'/ZH_HToBB_ZToQQ_M125_13TeV_powheg_pythia8_1000pb_weighted.root',
 			idir+'/WminusH_HToBB_WToQQ_M125_13TeV_powheg_pythia8_1000pb_weighted.root',
